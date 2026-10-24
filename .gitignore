@@ -1,0 +1,5 @@
+.env
+.session_id
+whatsapp-log.md
+__pycache__/
+*.pyc
