@@ -30,7 +30,7 @@ Then point your Twilio WhatsApp sender's inbound webhook at `https://<your-publi
 
 ## Status
 
-Built and ready to deploy against a real Twilio WhatsApp sender. End-to-end live testing (a real message in, a real reply out, confirmed via Twilio's own execution log) is pending final account verification on the Twilio side — this README will be updated with the real test evidence once that clears.
+Built and tested against simulated WhatsApp webhook requests: the signature check, the trusted-sender allowlist, session memory across messages and the failure handling all run as described. It has not been run against a live WhatsApp number. The provider-specific parts (signature check and sending the reply) sit in two short blocks of the webhook handler (the signature check and the send), so pointing it at another WhatsApp provider is a small change, not a rewrite.
 
 ## Stack
 
